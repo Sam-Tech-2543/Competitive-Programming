@@ -28,7 +28,8 @@ class Solution:
 
             hashMap[i]=[maxLen,maxCount]
 
-        return c
+        return c   
+
     
 s=Solution()
 
@@ -36,3 +37,33 @@ s=Solution()
 # Output: 2
 # Explanation: The two longest increasing subsequences are [1, 3, 4, 7] and [1, 3, 5, 7].
 print(s.findNumberOfLIS([1,3,5,4,7]))
+
+print(s.findNumberOfLIS([2,2,2,2,2]))
+
+
+
+# def findNumberOfLIS(self, nums: List[int]) -> int:
+#     maxLenAns,maxCountAns=0,0
+#     hashMap=dict()
+
+#     for i in nums:
+#         maxL,maxC=1,1
+#         for j in hashMap.keys():
+#             if i<j:
+#                 l,c=hashMap[j]
+#                 if l>maxL:
+#                     maxL,maxC=l,c
+#                 elif l==maxL:
+#                     maxC+=c    
+
+#         hashMap[i]=[maxL,maxC]
+
+#         if maxL>maxLenAns:
+#             maxLenAns=maxL
+#             maxCountAns=maxC
+#         elif maxL==maxLenAns:
+#             maxCountAns+=maxC
+        
+#         print(hashMap)
+        
+#     return maxCountAns   
