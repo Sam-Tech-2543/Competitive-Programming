@@ -5,16 +5,17 @@ from typing import List
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        dict={}
+        hashMap={}
         ans=0
 
         for i in nums:
             maxVal=0
-            for j in dict.keys():
+            for j in hashMap.keys():
                 if j<i:
-                    maxVal=max(dict.get(j),maxVal)
-            dict[i]=1+maxVal
-            ans=max(ans,dict[i])
+                    maxVal=max(hashMap.get(j),maxVal)
+            hashMap[i]=1+maxVal
+            ans=max(ans,hashMap[i])
+
         return ans
     
 s=Solution()
@@ -31,3 +32,13 @@ print(s.lengthOfLIS([0,1,0,3,2,3]))
 # Input: nums = [7,7,7,7,7,7,7]
 # Output: 1
 print(s.lengthOfLIS([7,7,7,7,7,7,7]))
+
+
+# lst=[1]*len(nums)
+
+# for i in range(len(nums)-1,-1,-1):
+#     for j in range(i+1,len(nums)):
+#         if nums[i]<nums[j]:
+#             lst[i]=max(lst[i],1+lst[j])
+
+# return max(lst)
