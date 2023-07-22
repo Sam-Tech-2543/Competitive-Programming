@@ -1,7 +1,7 @@
 # 23. Merge k Sorted Lists
 # https://leetcode.com/problems/merge-k-sorted-lists/
 
-from typing import List
+from typing import List, Optional
 
 # Definition for singly-linked list.
 class ListNode:

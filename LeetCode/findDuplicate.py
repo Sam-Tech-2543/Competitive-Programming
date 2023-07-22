@@ -5,22 +5,22 @@ from typing import List
 
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        # myHash={}
+        myHash={}
 
-        # for i in nums:
-        #     if myHash.get(i,0)==0:
-        #         myHash[i]=1
-        #     else:
-        #         return i
-
-        # Using XOR
-
-        ans=0
-        for i in range(1,len(nums)):
-            ans^=i
         for i in nums:
-            ans^=i
-        return ans
+            if myHash.get(i,0)==0:
+                myHash[i]=1
+            else:
+                return i
+
+        # # Using XOR
+
+        # ans=0
+        # for i in range(1,len(nums)):
+        #     ans^=i
+        # for i in nums:
+        #     ans^=i
+        # return ans
 
 
 s=Solution()
