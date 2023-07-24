@@ -1,16 +1,43 @@
 # 6930. Check if Array is Good
-# https://leetcode.com/contest/biweekly-contest-109/problems/check-if-array-is-good/
+# https://leetcode.com/problems/check-if-array-is-good/
 
 from typing import List
 
 class Solution:
     def isGood(self, nums: List[int]) -> bool:
+        # s1,s2=0,0
+        # for i in range(len(nums)):
+        #     s1+=nums[i]
+        #     s2+=(i+1)
+
+        # return s2-1==s1
+
+        # nums.sort()
+        # for i in range(len(nums)-1):
+        #     if  nums[i]!=i+1:
+        #         return False
+        #     if nums[i]==nums[i+1]:
+        #         if i==len(nums)-2:
+        #             return True
+        #         else:
+        #             return False
+
+        # return False
+            
         s1,s2=0,0
+        maxVal=0
         for i in range(len(nums)):
             s1+=nums[i]
             s2+=(i+1)
+            if maxVal<nums[i]:
+                maxVal=nums[i]
 
-        return s2-1==s1
+        count=0
+        for i in nums:
+            if i==maxVal:
+                count+=1
+
+        return (count==2 and s1+1==s2)
 
 
 s=Solution()
