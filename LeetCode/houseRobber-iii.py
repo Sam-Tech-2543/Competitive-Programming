@@ -14,13 +14,13 @@ class TreeNode:
 class Solution:
     def dfs(self, root: Optional[TreeNode]):
         if root is None:
-            return [0,0]
+            return [0, 0]
 
-        left=self.dfs(root.left)
-        right=self.dfs(root.right)
+        left = self.dfs(root.left)
+        right = self.dfs(root.right)
 
-        withRoot=root.val+left[1]+right[1]
-        withoutRoot=max(left)+max(right)
+        withRoot = root.val + left[1] + right[1]
+        withoutRoot = max(left) + max(right)
 
         return [withRoot, withoutRoot]
 
