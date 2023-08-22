@@ -2,25 +2,31 @@
 # https://leetcode.com/problems/partition-equal-subset-sum/
 
 from typing import List
-import heapq
-
 
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
         s = sum(nums)
-        if s % 2 != 0:
+        if s % 2 != 0 or len(nums)==0 or len(nums)==1:
             return False
 
-        s = int(s / 2)
+        target=int(s/2)
 
-        dp = [False] * (s + 1)
-        dp[0] = True
+        mySet=set()
+        mySet.add(0)
 
-        for num in nums:
-            for j in range(s, num - 1, -1):
-                dp[j] = dp[j] or dp[j - num]
+        for i in range(len(nums)-1,-1,-1):
+            newSet=set()
+            for j in mySet:
+                s=j+nums[i]
+                if s==target:
+                    return True
+                newSet.add(s)
+                newSet.add(j)
 
-        return dp[s]
+            mySet=newSet
+
+        return False
+
 
 
 s = Solution()

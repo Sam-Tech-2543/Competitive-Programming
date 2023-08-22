@@ -15,7 +15,22 @@ class Solution:
 
         return ans>=n
 
+        # i=0
+        # ans=0
+        # while i<len(flowerbed):
+        #     if ans==n:
+        #         return True
+            
+        #     if flowerbed[i]==1:
+        #         i+=2
+        #     elif flowerbed[i]==0:
+        #         if i==len(flowerbed)-1 or flowerbed[i+1]==0:
+        #             i+=2
+        #             ans+=1
+        #         else:
+        #             i+=3
 
+        # return ans==n
 
 s=Solution()
 

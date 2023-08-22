@@ -8,6 +8,7 @@ class Solution:
         ans = 0
 
         for i in range(len(s)):
+            print(stack)
             if s[i] == "(":
                 stack.append(i)
             else:
@@ -15,6 +16,12 @@ class Solution:
                 if not stack:
                     stack.append(i)
                 else:
+                    print(i, stack[-1])
                     ans = max(ans, i - stack[-1])
+            print(stack, ans)
 
         return ans
+
+
+s=Solution()
+s.longestValidParentheses("(()())())()")
