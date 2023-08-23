@@ -59,17 +59,20 @@ print("Avdhut's Answer: ",idk(a, 2))
 
 arr = [1 ,2, 1, 2, 2, 1, 3, 3, 3, 2, 2 ,2 ,3, 3, 2, 4, 8, 1, 2]
 k =3
-print("Answer: ",soln(arr, k))
+print("My Answer: ",soln(arr, k))
 print("Avdhut's Answer: ",idk(arr, k))
 
 a = [1,2,1,2,1,2,3,1,3,2,3,3,2]
-print("Answer: ",soln(a, 2))
+print("My Answer: ",soln(a, 2))
 print("Avdhut's Answer: ",idk(a, 2))
 
 a = [1,2,1,2,1,2,3,1,3]
-print("Answer: ",soln(a, 2))
+print("My Answer: ",soln(a, 2))
 print("Avdhut's Answer: ",idk(a, 2))
 
+a=[2,4,4,5,2,3,7,2]
+print("My Answer: ",soln(a, 4))
+print("Avdhut's Answer: ",idk(a, 4))
  
 
 # a = [1,2,1,2,1,2,3,1,3]
