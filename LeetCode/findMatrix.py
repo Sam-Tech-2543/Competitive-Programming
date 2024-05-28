@@ -26,7 +26,31 @@ class Solution:
             ans.append(temp)
 
         return ans[:-1]
-    
+    # def findMatrix(self, nums: List[int]) -> List[List[int]]:
+    #     ans=[]
+    #     old=set()
+    #     temp=[]
+
+    #     for i in nums:
+    #         if i not in old:
+    #             old.add(i)
+    #             temp.append(i)
+    #         else:
+    #             ans.append(temp)
+    #             temp=[]
+    #             flag=1
+    #             for j in range(len(ans)):
+    #                 if i not in ans[j]:
+    #                     ans[j].append(i)
+    #                     flag=0
+    #                     break
+    #             if flag:
+    #                 temp.append(i)
+
+    #     if temp:
+    #         ans.append(temp)
+
+    #     return ans    
 
 s=Solution()
 
